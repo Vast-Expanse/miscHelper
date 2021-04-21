@@ -1,0 +1,12 @@
+var obj = {
+        someKey:'Value',
+        num: 1
+    }
+
+    var clone = {};
+
+    for(let key in obj) {
+        clone[key] = obj[key];
+    }
+
+console.log(clone);
