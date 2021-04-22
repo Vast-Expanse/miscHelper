@@ -1,0 +1,34 @@
+
+    let someData = ['12px', '1.22', '000', '9.99$','denver'];
+    let totalSum = 0;
+    let totalWords = 0;
+    let totalNum = 0;
+    
+    function resultData(result) {
+
+        for (let i = 0; i < result.length; i++) {
+
+            totalWords += result[i].length - 1;
+
+        }
+
+        let someOutput = [];
+
+        someData.forEach(function (element) {
+            someOutput.push((parseInt(element)));
+        });
+
+        for(let i = 0; i < someOutput.length; i++){
+            if(someOutput[i] > 0) {
+                totalSum+=someOutput[i];
+            } else {
+                totalNum ++;
+            }
+        }
+
+        console.log("Total values sum in object =  " + totalSum);
+        console.log("Words in total = " + totalWords);
+        console.log("Amounts of calculating errors, which lead to NaN = " + totalNum);
+    }
+
+    resultData(someData);
