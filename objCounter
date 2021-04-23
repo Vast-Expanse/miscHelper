@@ -1,0 +1,39 @@
+ //check, if object is empty
+    function isObjEmpty(obj) {
+      for(let key in obj) {
+          return false
+      }return true
+    }
+
+    var filledObj = {
+        no : 'xd'
+    }
+    var emptyObj = {
+
+    };
+    console.log(isObjEmpty(filledObj));
+    console.log(isObjEmpty(emptyObj));
+
+    //object sum
+    function objectSum(obj) {
+        var result =0;
+
+        if (isObjEmpty(obj)) {
+          return result;
+        } else {
+        for(let key in obj) {
+            result+=obj[key];
+        }
+        return result;
+        }
+    }
+    var countEmpty = {
+
+    };
+    var countFilled = {
+        v1 : 1090,
+        v2: 200
+    };
+
+    console.log(objectSum(countEmpty));
+    console.log(objectSum(countFilled));
